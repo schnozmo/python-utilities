@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import re
+import fileinput
 
 def dec2bitarray(n):
     """return a list containing 1 bit for each"""
@@ -21,9 +22,9 @@ def dec2hex(n):
 def hex2dec(s):
     return int(s, 16)
 
-while True:
-    input = raw_input()
-    input = int(input)
+for line in fileinput.input():
+    line = line.rstrip('\r\n')
+    input = int(line)
     print input, "-", dec2hex(input), "-", dec2bitarray(input)
 
 
