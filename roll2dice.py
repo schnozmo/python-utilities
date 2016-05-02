@@ -64,7 +64,7 @@ for i in range(1,7):
 
 print("\nSingle die frequency:")
 
-for i in range(2,12):
+for i in range(2,13):
     if i not in tot_count:
         tot_count[i] = 0
     
